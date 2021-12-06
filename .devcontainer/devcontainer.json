@@ -1,0 +1,23 @@
+{
+	"name": "Node.js & TypeScript",
+	"build": {
+		"dockerfile": "Dockerfile",
+		"args": {
+			"VARIANT": "16-bullseye"
+		}
+	},
+	"mounts": [
+		"source=${localEnv:HOME}/.aws,target=/home/node/.aws,type=bind,consistency=cached",
+	],
+	"settings": {},
+	"extensions": [
+		"dbaeumer.vscode-eslint",
+		"amazonwebservices.aws-toolkit-vscode",
+		"ms-python.vscode-pylance",
+		"ms-python.python"
+	],
+	"remoteUser": "node",
+	"features": {
+		"python": "3.10"
+	}
+}
